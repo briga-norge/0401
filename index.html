@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Числа щодня · Tall, klokka og datoer · Selvstudium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141414;--text:#2B2B2B;--muted:#5F6670;--pale:#EAF1FB;--blue:#1460C4;--line:#C9D6E8;--orange:#C25E00;--paleor:#FFF1E3;--red:#C0392B;--green:#2E7D32;--ok:#E5F4E4;--bad:#FBEBEB;--bg:#F4F6F9;--card:#FCFCFA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.6 'Alegreya Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+header,main,footer{max-width:1000px;margin:auto;padding:0 20px}
+header{padding-top:36px}
+.logo{width:72px;height:72px;border-radius:50%;background:var(--ink);color:var(--card);display:flex;align-items:center;justify-content:center;font:600 22px/0.95 Oswald,Arial,sans-serif;text-align:center;float:right;margin-left:16px}
+.eyebrow{color:var(--blue);font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;margin:0}
+h1{font:600 clamp(2.4rem,7vw,4.2rem)/1.05 Oswald,Arial,sans-serif;text-transform:uppercase;color:var(--ink);margin:6px 0 10px}
+h2{font:600 clamp(1.7rem,4.5vw,2.4rem)/1.1 Oswald,Arial,sans-serif;text-transform:uppercase;color:var(--ink);margin:0 0 4px}
+h3{font:600 1.35rem/1.2 Oswald,Arial,sans-serif;color:var(--ink);margin:28px 0 8px;text-transform:uppercase}
+h4{font-size:1.05rem;margin:18px 0 6px;color:var(--ink)}
+p{margin:8px 0 14px}
+.lead{font-size:1.1rem;color:var(--text)}
+.sub{color:var(--muted);margin:0 0 16px}
+.uk{font-weight:700;color:var(--ink)}
+.r{color:var(--red)}.g{color:var(--green)}.b{color:var(--blue)}
+.muted{color:var(--muted)}
+nav.top{position:sticky;top:0;z-index:20;background:#F4F6F9;border-bottom:1px solid var(--line)}
+nav.top div{max-width:1000px;margin:auto;padding:8px 20px;display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}
+nav.top a{font-size:.88rem;padding:4px 10px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--blue);text-decoration:none;white-space:nowrap}
+nav.top a:hover{background:var(--pale)}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;margin:22px 0;scroll-margin-top:70px}
+.box{border-radius:10px;padding:14px 18px;margin:14px 0}
+.forklaring{background:var(--pale)}
+.forklaring h4:first-child{margin-top:0}
+.gratis{border:2px solid var(--blue);background:#fff}
+.felle{border:2px solid var(--orange);background:var(--paleor)}
+.gratis b.tag{color:var(--blue)}.felle b.tag{color:var(--orange)}
+.tips{border-left:4px solid var(--green);background:#F2F8F2}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.two{grid-template-columns:1fr}section{padding:20px 16px}}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:1rem}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+th{background:var(--pale);font-weight:700;color:var(--ink)}
+.tw{overflow-x:auto}
+button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 14px}
+button:hover{background:var(--pale)}
+button.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+button.primary:hover{filter:brightness(1.08);background:var(--blue)}
+button.say{padding:2px 7px;border-radius:999px;border:1px solid var(--line);background:#fff;vertical-align:middle;line-height:1;margin-left:4px}
+button.say svg{width:16px;height:16px;vertical-align:-3px;fill:var(--blue)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0 6px}
+input[type=text],select,textarea{font:inherit;padding:5px 9px;border:1.5px solid #9DB4D3;border-radius:7px;background:#fff;color:var(--ink)}
+textarea{width:100%;min-height:90px}
+input[type=text]{max-width:100%}
+li.item{overflow-wrap:anywhere}
+input.ok,select.ok{border-color:var(--green);background:var(--ok)}
+input.bad,select.bad{border-color:var(--orange);background:var(--bad)}
+.ex{border-top:3px solid var(--ink);margin-top:30px;padding-top:6px}
+.ex h3{margin-top:10px}
+.ex .instr{font-weight:700;color:var(--ink)}
+ol.items{padding-left:0;list-style:none;margin:10px 0;display:grid;gap:10px}
+ol.items.cols{grid-template-columns:1fr 1fr}
+@media(max-width:700px){ol.items.cols{grid-template-columns:1fr}}
+li.item{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 12px}
+li.item .n{display:inline-block;min-width:1.6em;font-weight:700;color:var(--blue)}
+.mark{font-weight:700;margin-left:6px}
+.mark.ok{color:var(--green)}.mark.bad{color:var(--orange)}
+.why{font-size:.95rem;color:var(--text);background:var(--pale);border-radius:6px;padding:5px 10px;margin-top:6px}
+.score{font-weight:700;color:var(--ink)}
+.signs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:14px 0}
+@media(max-width:600px){.signs{grid-template-columns:repeat(3,1fr)}}
+.sign{aspect-ratio:1/1;border-radius:12px;display:flex;flex-direction:column;justify-content:space-between;padding:8px;font:600 3.4rem/1 Oswald,Arial,sans-serif;text-align:center}
+.sign span{font:700 .95rem/1 'Alegreya Sans',sans-serif;background:#fff;color:var(--ink);border-radius:6px;padding:3px 8px;align-self:flex-start}
+.sign b{flex:1;display:flex;align-items:center;justify-content:center}
+.illu{width:100%;height:auto;display:block;margin:10px 0;border-radius:10px;background:#fff}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+@media(max-width:600px){.legend{grid-template-columns:1fr}}
+.legend div{background:var(--pale);border-radius:8px;padding:10px 14px;border-top:6px solid}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--pale);border-radius:8px;padding:4px 12px}
+.tool{border:2px dashed var(--blue);border-radius:12px;padding:14px 18px;margin:16px 0;background:#fff}
+.tool .out{font-size:1.4rem;font-weight:700;color:var(--ink);margin-top:8px;min-height:1.6em}
+.grid12{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0}
+.grid12 div{background:var(--pale);border-radius:10px;text-align:center;padding:10px 4px;font:600 2.2rem/1.1 Oswald,Arial,sans-serif;color:var(--ink)}
+.grid12 small{display:block;font:500 .9rem/1.2 'Alegreya Sans',sans-serif;color:var(--muted);min-height:1.2em}
+.timer{font:600 2.4rem/1 Oswald,Arial,sans-serif;color:var(--blue)}
+.big{font:600 2rem/1.2 Oswald,Arial,sans-serif;color:var(--ink)}
+.warn{display:none;background:var(--paleor);border:2px solid var(--orange);border-radius:10px;padding:10px 14px;margin:14px 0}
+.saved{font-size:.9rem;color:var(--muted)}
+.check li{list-style:none;margin:6px 0}
+.check{padding-left:0}
+details{background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 14px;margin:12px 0}
+summary{cursor:pointer;font-weight:700;color:var(--blue)}
+.dialog p{margin:2px 0}
+.pill{display:inline-block;background:var(--ink);color:#fff;border-radius:6px;padding:0 8px;font:600 1rem/1.6 Oswald,Arial,sans-serif;margin-right:8px}
+#kbdBtn{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 18px;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+#kbd{position:fixed;left:50%;transform:translateX(-50%);bottom:70px;z-index:30;background:#fff;border:2px solid var(--ink);border-radius:12px;padding:10px;box-shadow:0 6px 24px rgba(0,0,0,.25);display:none;width:min(760px,96vw)}
+#kbd .row{display:flex;gap:4px;justify-content:center;margin:4px 0;flex-wrap:wrap}
+#kbd button{min-width:40px;padding:7px 0;font-size:1.05rem}
+#kbd .wide{min-width:120px}
+#kbdInfo{font-size:.85rem;color:var(--muted);text-align:center;margin:0 0 4px}
+footer{padding-bottom:90px}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid #F2C14E;outline-offset:2px}
+.print-only{display:none}
+@media print{
+ nav.top,#kbdBtn,#kbd,.btns,button,.tool,.noprint,.warn{display:none!important}
+ body{background:#fff;font-size:12pt}
+ section{break-inside:avoid-page;border:1px solid #bbb;margin:10px 0}
+ .why[hidden]{display:none}
+ .print-only{display:block}
+ input[type=text],select{border:0;border-bottom:1px solid #555;border-radius:0;background:#fff}
+}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Innhold"><div>
+<a href="#start">Start</a><a href="#gata">1 Tall i gata</a><a href="#n10">2 Tall 0–10</a><a href="#n20">3 Tall 11–20</a><a href="#n100">4 Tall 20–100</a><a href="#klokka">5 Klokka</a><a href="#dagen">6 Dagen min</a><a href="#datoer">7 Datoer</a><a href="#spill">8 Spill</a><a href="#spor">9 Spør en ukrainer</a><a href="#sjekk">10 Oppsummering</a><a href="#ekstra">Ekstra</a>
+</div></nav>
+
+<header>
+<div class="logo" aria-hidden="true">UA<br>NO</div>
+<p class="eyebrow">Ukrainsk for nordmenn · A1–A2 · Ekstra leksjon · Selvstudium</p>
+<h1>Числа щодня</h1>
+<p class="lead">Tall, klokka og datoer. Etter denne leksjonen kan du si tallene fra 0 til 100, si hva klokka er, fortelle når du gjør ting i løpet av dagen og si når du har bursdag.</p>
+<p><label>Navn: <input type="text" id="navn" data-save="navn" style="width:16em"></label></p>
+<div class="btns">
+<button type="button" class="primary" data-act="print">Skriv ut / lagre PDF</button>
+<button type="button" data-act="word">Last ned som Word</button>
+<button type="button" data-act="clearall">Tøm alle svar</button>
+</div>
+<p class="saved" id="saved"></p>
+<div class="warn" id="voiceWarn"><b>Ingen ukrainsk stemme funnet.</b> Knappene ▶ som leser opp ukrainsk, virker bare når nettleseren har en ukrainsk stemme. Alle oppgavene virker likevel. Tips: prøv Chrome eller Edge, eller legg til ukrainsk tale i innstillingene på maskinen.</div>
+</header>
+
+<main>
+
+<section id="start">
+<p class="eyebrow">Start</p>
+<h2>Як працювати</h2>
+<p class="sub">Slik jobber du med siden</p>
+<ol>
+<li>Les forklaringen i de blå boksene. Trykk på <button type="button" class="say" data-say="Привіт!" aria-label="Lytt"></button> for å høre ukrainsk.</li>
+<li>Si alt ukrainsk <b>høyt</b>, også når du er alene. Det er slik tallene setter seg.</li>
+<li>Skriv svarene og trykk <b>Sjekk</b>. Står du fast, viser <b>Vis fasit</b> svaret og hvorfor det er riktig.</li>
+<li>Avslutt med del 9: still noen spørsmål til en person som snakker ukrainsk.</li>
+</ol>
+<div class="box tips"><b>Tid:</b> omtrent 75–90 minutter. Del gjerne opp: del 1–4 én dag, del 5–9 en annen. Svarene lagres automatisk i nettleseren.</div>
+<div class="box tips"><b>Ukrainsk tastatur:</b> trykk på knappen <b>Ukrainsk tastatur</b> nederst til høyre. Klikk først i svarfeltet, så på bokstavene. Apostrofen ’ finner du også der.</div>
+<h4>Fargene</h4>
+<p>Fargene er de samme som i timene. I dag er tallene røde eller blå, alt etter hva de svarer på.</p>
+<div class="legend">
+<div style="border-top-color:var(--red)"><b class="r">СКІЛЬКИ? ЩО?</b><br><span class="muted">hvor mange? hva?</span><br>дві чашки · автобус 16</div>
+<div style="border-top-color:var(--green)"><b class="g">ЩО РОБИТЬ?</b><br><span class="muted">hva gjør?</span><br>встаю · п’ю · обідаю</div>
+<div style="border-top-color:var(--blue)"><b class="b">КОЛИ? О КОТРІЙ?</b><br><span class="muted">når? hvilket klokkeslett?</span><br>о сьомій · пів на восьму</div>
+</div>
+<p class="big">Я <span class="g">п’ю</span> <span class="r">дві чашки кави</span> <span class="b">о восьмій</span>. <button type="button" class="say" data-say="Я п’ю дві чашки кави о восьмій."></button></p>
+</section>
+
+<section id="gata">
+<p class="eyebrow">Del 1</p>
+<h2>Де тут числа?</h2>
+<p class="sub">Tall i hverdagen</p>
+<p>Tall er overalt: på bussen, på døra, på klokka og på prislappen. Mange tall leser du bare med øynene. Noen må du kunne <b>si og forstå</b>: klokkeslettet, bussnummeret, prisen, datoen. Det er dem vi øver på i dag.</p>
+<svg xmlns="http://www.w3.org/2000/svg" class="illu" role="img" viewBox="0 0 1200 680" aria-label="En gate med et hus med nummer 14, en klokke som viser halv ni, en kafé der kaffen koster 35 kroner, et fartsskilt med 30, en buss med nummer 16 og en temperatur på 5 grader">
+<!-- ground -->
+<rect x="0" y="560" width="1200" height="120" fill="#C3C9D2"/>
+<rect x="0" y="548" width="1200" height="16" fill="#8A929C"/>
+<path d="M60 625 h120 M300 625 h120 M540 625 h120 M780 625 h120 M1020 625 h120" stroke="#FCFCFA" stroke-width="10" stroke-linecap="round"/>
+
+<!-- house left with door number 14 -->
+<rect x="30" y="170" width="300" height="380" fill="#F2C14E"/>
+<path d="M10 182 L180 50 L350 182 Z" fill="#C25E00"/>
+<rect x="60" y="220" width="90" height="90" rx="6" fill="#EAF1FB" stroke="#141414" stroke-width="6"/>
+<path d="M105 220 v90 M60 265 h90" stroke="#141414" stroke-width="5"/>
+<rect x="210" y="220" width="90" height="90" rx="6" fill="#EAF1FB" stroke="#141414" stroke-width="6"/>
+<path d="M255 220 v90 M210 265 h90" stroke="#141414" stroke-width="5"/>
+<rect x="130" y="400" width="100" height="150" rx="8" fill="#9D7FD6"/>
+<circle cx="212" cy="480" r="7" fill="#F2C14E"/>
+<rect x="142" y="338" width="76" height="48" rx="8" fill="#1460C4"/>
+<text x="180" y="374" font-family="Oswald, Arial, sans-serif" font-size="36" font-weight="700" fill="#FCFCFA" text-anchor="middle">14</text>
+
+<!-- street clock 8:30 -->
+<rect x="404" y="210" width="16" height="340" fill="#141414"/>
+<circle cx="412" cy="150" r="78" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<g stroke="#141414" stroke-width="5" stroke-linecap="round">
+<path d="M412 82 v14 M412 204 v14 M344 150 h14 M466 150 h14"/>
+</g>
+<g fill="#141414" font-family="Oswald, Arial, sans-serif" font-size="20" text-anchor="middle">
+<text x="412" y="120">12</text>
+</g>
+<!-- hour hand between 8 and 9 (255deg from 12) ; minute hand at 6 -->
+<path d="M412 150 L370 162" stroke="#141414" stroke-width="9" stroke-linecap="round"/>
+<path d="M412 150 L412 208" stroke="#C25E00" stroke-width="6" stroke-linecap="round"/>
+<circle cx="412" cy="150" r="7" fill="#141414"/>
+
+<!-- cafe with price 35 kr -->
+<rect x="480" y="250" width="330" height="300" fill="#EAF1FB" stroke="#141414" stroke-width="6"/>
+<path d="M470 250 h350 l-20 -50 h-310 z" fill="#C25E00"/>
+<path d="M510 250 v18 M560 250 v18 M610 250 v18 M660 250 v18 M710 250 v18 M760 250 v18" stroke="#C25E00" stroke-width="14" stroke-linecap="round"/>
+<text x="645" y="238" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">КАВА</text>
+<rect x="505" y="300" width="160" height="140" rx="6" fill="#FCFCFA" stroke="#141414" stroke-width="5"/>
+<!-- cup in window -->
+<path d="M545 360 h70 v34 a20 20 0 0 1 -20 20 h-30 a20 20 0 0 1 -20 -20 z" fill="#FCFCFA" stroke="#141414" stroke-width="5"/>
+<path d="M615 370 a14 14 0 0 1 0 28" fill="none" stroke="#141414" stroke-width="5"/>
+<path d="M565 345 q8 -12 0 -24 M590 345 q8 -12 0 -24" fill="none" stroke="#8A929C" stroke-width="4" stroke-linecap="round"/>
+<!-- price tag -->
+<g transform="rotate(-8 600 470)">
+<path d="M560 450 h110 v54 h-110 l-18 -27 z" fill="#F2C14E" stroke="#141414" stroke-width="4"/>
+<circle cx="560" cy="477" r="6" fill="#141414"/>
+<text x="620" y="491" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#141414" text-anchor="middle">35 kr</text>
+</g>
+<rect x="700" y="330" width="80" height="220" rx="6" fill="#9D7FD6"/>
+<circle cx="716" cy="440" r="6" fill="#F2C14E"/>
+
+<!-- temperature display 5° on cafe -->
+
+<!-- speed sign 30 -->
+<rect x="860" y="300" width="12" height="250" fill="#8A929C"/>
+<circle cx="866" cy="260" r="56" fill="#FCFCFA" stroke="#C0392B" stroke-width="14"/>
+<text x="866" y="278" font-family="Oswald, Arial, sans-serif" font-size="50" font-weight="700" fill="#141414" text-anchor="middle">30</text>
+
+<!-- bus 16 -->
+<g transform="translate(900 360)">
+<rect x="0" y="0" width="290" height="180" rx="24" fill="#1460C4"/>
+<rect x="18" y="22" width="70" height="70" rx="8" fill="#EAF1FB"/>
+<rect x="100" y="22" width="70" height="70" rx="8" fill="#EAF1FB"/>
+<rect x="182" y="22" width="70" height="70" rx="8" fill="#EAF1FB"/>
+<rect x="196" y="-30" width="80" height="44" rx="6" fill="#141414"/>
+<text x="236" y="5" font-family="Oswald, Arial, sans-serif" font-size="36" font-weight="700" fill="#F2C14E" text-anchor="middle">16</text>
+<rect x="0" y="120" width="290" height="14" fill="#0E4A99"/>
+<circle cx="64" cy="186" r="28" fill="#141414"/><circle cx="64" cy="186" r="11" fill="#C3C9D2"/>
+<circle cx="226" cy="186" r="28" fill="#141414"/><circle cx="226" cy="186" r="11" fill="#C3C9D2"/>
+</g>
+
+<!-- thermometer sign 5° -->
+<rect x="1060" y="120" width="12" height="230" fill="#8A929C"/>
+<rect x="1010" y="70" width="112" height="70" rx="10" fill="#141414"/>
+<text x="1066" y="122" font-family="Oswald, Arial, sans-serif" font-size="42" font-weight="700" fill="#F2C14E" text-anchor="middle">5 °C</text>
+</svg>
+
+<div class="ex" id="ex1wrap">
+<h3>Вправа 1</h3>
+<p class="instr">Finn seks tall i bildet. Skriv tallet med sifre.</p>
+<div id="ex1"></div>
+</div>
+<div class="box forklaring">
+<h4>Ord som hjelper</h4>
+<div class="chips"><span class="chip">будинок · hus</span><span class="chip">автобус · buss</span><span class="chip">година · klokke, time</span><span class="chip">ціна · pris</span><span class="chip">градуси · grader</span></div>
+<p style="margin-top:10px">Når du har sjekket, viser forklaringen hvordan tallet sies på ukrainsk. Du lærer alle ordene i del 2–5.</p>
+</div>
+</section>
+
+<section id="n10">
+<p class="eyebrow">Del 2</p>
+<h2>Числа 0–10</h2>
+<p class="sub">Grunntallene</p>
+<p>Lytt og si etter. Les tallene fra 0 til 10, så baklengs fra 10 til 0.</p>
+<div class="tw"><table>
+<tr><th>Tall</th><th>Українською</th><th>Huskeregel</th></tr>
+<tr><td>0</td><td class="uk">нуль <button type="button" class="say" data-say="нуль"></button></td><td class="muted">som «null»</td></tr>
+<tr><td>1</td><td class="uk">один <button type="button" class="say" data-say="один"></button></td><td class="muted">trykk på slutten: o-DYN</td></tr>
+<tr><td>2</td><td class="uk">два <button type="button" class="say" data-say="два"></button></td><td class="muted">som «duo»</td></tr>
+<tr><td>3</td><td class="uk">три <button type="button" class="say" data-say="три"></button></td><td class="muted">som «tre»</td></tr>
+<tr><td>4</td><td class="uk">чотири <button type="button" class="say" data-say="чотири"></button></td><td class="muted">tsjo-TY-ry</td></tr>
+<tr><td>5</td><td class="uk">п’ять <button type="button" class="say" data-say="п’ять"></button></td><td class="muted">apostrof: p + jat</td></tr>
+<tr><td>6</td><td class="uk">шість <button type="button" class="say" data-say="шість"></button></td><td class="muted">som «seks»</td></tr>
+<tr><td>7</td><td class="uk">сім <button type="button" class="say" data-say="сім"></button></td><td class="muted">s- som i «sju»</td></tr>
+<tr><td>8</td><td class="uk">вісім <button type="button" class="say" data-say="вісім"></button></td><td class="muted">сім med ві- foran</td></tr>
+<tr><td>9</td><td class="uk">дев’ять <button type="button" class="say" data-say="дев’ять"></button></td><td class="muted">apostrof: dev + jat</td></tr>
+<tr><td>10</td><td class="uk">десять <button type="button" class="say" data-say="десять"></button></td><td class="muted">som «desimal»</td></tr>
+</table></div>
+<div class="box forklaring">
+<h4>Tre ting å legge merke til</h4>
+<ul>
+<li><b>шість, сім, вісім</b> skrives alle med <b>і</b>. Den lyder som norsk i.</li>
+<li><b>один, чотири</b> har <b>и</b>. Den lyder som en kort, litt mørkere i — mellom i og e.</li>
+<li><b>п’ять, дев’ять</b> har apostrof. Den skiller bokstavene: du sier «p» og så «jat», ikke «pjat» i én lyd.</li>
+</ul>
+</div>
+<div class="ex">
+<h3>Вправа 2</h3>
+<p class="instr">Se på skiltene a–j. Velg riktig skilt for hvert tall.</p>
+<div class="signs" aria-label="Ti skilt med tall">
+<div class="sign" style="background:#141414;color:#FCFCFA;transform:rotate(-2deg)"><b>3</b><span>a</span></div>
+<div class="sign" style="background:#F2C14E;color:#141414;transform:rotate(2deg)"><b>8</b><span>b</span></div>
+<div class="sign" style="background:#C25E00;color:#EAF1FB;transform:rotate(-1deg)"><b>6</b><span>c</span></div>
+<div class="sign" style="background:#EAF1FB;color:#1460C4;border:4px solid #1460C4;transform:rotate(3deg)"><b>1</b><span>d</span></div>
+<div class="sign" style="background:#1460C4;color:#F2C14E;transform:rotate(-3deg)"><b>5</b><span>e</span></div>
+<div class="sign" style="background:#9D7FD6;color:#FCFCFA;transform:rotate(2deg)"><b>10</b><span>f</span></div>
+<div class="sign" style="background:#FCFCFA;color:#141414;border:4px solid #141414;transform:rotate(-2deg)"><b>2</b><span style="background:#EAF1FB">g</span></div>
+<div class="sign" style="background:#2E7D32;color:#FCFCFA;transform:rotate(1deg)"><b>9</b><span>h</span></div>
+<div class="sign" style="background:#F9ECE7;color:#C0392B;border:4px solid #C0392B;transform:rotate(-3deg)"><b>7</b><span>i</span></div>
+<div class="sign" style="background:#5F6670;color:#FCFCFA;transform:rotate(2deg)"><b>4</b><span>j</span></div>
+</div>
+<div id="ex2"></div>
+</div>
+<div class="ex">
+<h3>Вправа 3</h3>
+<p class="instr">Tre små oppgaver. A: skriv bokstaven som mangler. B: hva kommer så? C: regn ut og skriv svaret med ord.</p>
+<h4>A · Hvilken bokstav mangler?</h4>
+<div id="ex3a"></div>
+<h4>B · Hva kommer så?</h4>
+<div id="ex3b"></div>
+<h4>C · Regn ut med ord</h4>
+<div id="ex3c"></div>
+</div>
+</section>
+
+<section id="n20">
+<p class="eyebrow">Del 3</p>
+<h2>Числа 11–20</h2>
+<p class="sub">Tenårstallene</p>
+<div class="box forklaring">
+<h4>Ett mønster for alle</h4>
+<p>Tallene 11–19 er bygd likt: <b>tallet + надцять</b>. Надцять betyr omtrent «på ti»: тринадцять = «tre på ti». Trykket ligger alltid på <b class="b">на</b>.</p>
+</div>
+<div class="tw"><table>
+<tr><th>Tall</th><th>Українською</th><th>Bygd av</th></tr>
+<tr><td>11</td><td class="uk">оди<span class="b">на</span>дцять <button type="button" class="say" data-say="одинадцять"></button></td><td class="muted">один + надцять</td></tr>
+<tr><td>12</td><td class="uk">два<span class="b">на</span>дцять <button type="button" class="say" data-say="дванадцять"></button></td><td class="muted">два + надцять</td></tr>
+<tr><td>13</td><td class="uk">три<span class="b">на</span>дцять <button type="button" class="say" data-say="тринадцять"></button></td><td class="muted">три + надцять</td></tr>
+<tr><td>14</td><td class="uk">чотир<span class="b">на</span>дцять <button type="button" class="say" data-say="чотирнадцять"></button></td><td class="muted">чотир(и) + надцять</td></tr>
+<tr><td>15</td><td class="uk">п’ят<span class="b">на</span>дцять <button type="button" class="say" data-say="п’ятнадцять"></button></td><td class="muted">п’ят(ь) + надцять</td></tr>
+<tr><td>16</td><td class="uk">шіст<span class="b">на</span>дцять <button type="button" class="say" data-say="шістнадцять"></button></td><td class="muted">шіст(ь) + надцять</td></tr>
+<tr><td>17</td><td class="uk">сім<span class="b">на</span>дцять <button type="button" class="say" data-say="сімнадцять"></button></td><td class="muted">сім + надцять</td></tr>
+<tr><td>18</td><td class="uk">вісім<span class="b">на</span>дцять <button type="button" class="say" data-say="вісімнадцять"></button></td><td class="muted">вісім + надцять</td></tr>
+<tr><td>19</td><td class="uk">дев’ят<span class="b">на</span>дцять <button type="button" class="say" data-say="дев’ятнадцять"></button></td><td class="muted">дев’ят(ь) + надцять</td></tr>
+<tr><td>20</td><td class="uk"><span class="b">два</span>дцять <button type="button" class="say" data-say="двадцять"></button></td><td class="muted">два + дцять: to tiere</td></tr>
+</table></div>
+<div class="two">
+<div class="box gratis"><b class="tag">Gratis</b><br>-надцять fungerer som norsk -ten: tret<b>ten</b>, fjor<b>ten</b> = три<b>надцять</b>, чотир<b>надцять</b>. Du kjenner allerede ideen.</div>
+<div class="box felle"><b class="tag">Se opp</b><br>Fire tall mister siste bokstav: чотири → чотир-, п’ять → п’ят-, шість → шіст-, дев’ять → дев’ят-. Og hold 12 og 20 fra hverandre: два<b>на</b>дцять har -на-, двадцять har det ikke.</div>
+</div>
+<div class="ex">
+<h3>Вправа 4</h3>
+<p class="instr">Les de små dialogene høyt. Skriv tallet med sifre.</p>
+<div id="ex4"></div>
+<div class="box forklaring"><b>Nye ord i dialogene:</b> квартира = leilighet · кімната = rom · урок = time (på skolen) · яблук = epler · трамвай = trikk · столик = bord på restaurant · хвилин = minutter · коштує = koster · крон = kroner · сторінка = side. Скільки тобі років? = Hvor gammel er du?</div>
+</div>
+</section>
+
+<section id="n100">
+<p class="eyebrow">Del 4</p>
+<h2>Числа 20–100</h2>
+<p class="sub">Tierne og store tall</p>
+<div class="tw"><table>
+<tr><th>Tall</th><th>Українською</th><th>Bygd av</th></tr>
+<tr><td>20</td><td class="uk">двадцять <button type="button" class="say" data-say="двадцять"></button></td><td class="muted">два + дцять</td></tr>
+<tr><td>30</td><td class="uk">тридцять <button type="button" class="say" data-say="тридцять"></button></td><td class="muted">три + дцять</td></tr>
+<tr style="background:var(--paleor)"><td>40</td><td class="uk">сорок <button type="button" class="say" data-say="сорок"></button></td><td class="muted">eget ord — lær det utenat</td></tr>
+<tr><td>50</td><td class="uk">п’ятдесят <button type="button" class="say" data-say="п’ятдесят"></button></td><td class="muted">п’ять + десят(ь)</td></tr>
+<tr><td>60</td><td class="uk">шістдесят <button type="button" class="say" data-say="шістдесят"></button></td><td class="muted">шість + десят(ь)</td></tr>
+<tr><td>70</td><td class="uk">сімдесят <button type="button" class="say" data-say="сімдесят"></button></td><td class="muted">сім + десят(ь)</td></tr>
+<tr><td>80</td><td class="uk">вісімдесят <button type="button" class="say" data-say="вісімдесят"></button></td><td class="muted">вісім + десят(ь)</td></tr>
+<tr style="background:var(--paleor)"><td>90</td><td class="uk">дев’яносто <button type="button" class="say" data-say="дев’яносто"></button></td><td class="muted">eget ord — lær det utenat</td></tr>
+<tr><td>100</td><td class="uk">сто <button type="button" class="say" data-say="сто"></button></td><td class="muted">kort og enkelt</td></tr>
+</table></div>
+<div class="two">
+<div class="box gratis"><b class="tag">Gratis</b><br>Store tall bygges i samme rekkefølge som på moderne norsk, og uten «og»: tjueen = <b>двадцять один</b>, førtisju = <b>сорок сім</b>, nittini = <b>дев’яносто дев’ять</b>.</div>
+<div class="box felle"><b class="tag">Felle</b><br><b>сорок</b> (40) og <b>дев’яносто</b> (90) følger ikke mønsteret. Alle andre tiere er bygd av et tall du allerede kan.</div>
+</div>
+<div class="tool">
+<h4 style="margin-top:0">Tallmaskinen</h4>
+<p>Skriv et tall fra 0 til 100. Maskinen viser det med ord og leser det opp.</p>
+<label>Tall: <input type="text" id="tmIn" inputmode="numeric" style="width:6em"></label> <button type="button" id="tmSay" class="say" aria-label="Lytt"></button>
+<div class="out" id="tmOut"></div>
+</div>
+</section>
+
+<section id="klokka">
+<p class="eyebrow">Del 5</p>
+<h2>Котра година?</h2>
+<p class="sub">Hva er klokka?</p>
+<div class="box forklaring">
+<h4>To spørsmål — to former</h4>
+<p><b>Котра година?</b> = Hva er klokka? Svaret er et <b>ordenstall</b>: «den sjuende» time. Година (time) er hunkjønn, derfor ender svaret på -а: <b>Сьома.</b> (eller <b>Сьома година.</b>)</p>
+<p><b>О котрій?</b> = Når? Hvilket klokkeslett? Svaret får <b class="b">о</b> foran og ender på <b>-ій</b>: <b class="b">о сьомій</b>. Denne formen kjenner du fra «Я встаю о сьомій».</p>
+<p><b>Halv:</b> <b>пів на</b> + neste time, med -у på slutten: <b>пів на восьму</b> = 7:30.</p>
+</div>
+<div class="box gratis"><b class="tag">Gratis</b><br>Пів на восьму er halv åtte. Ukrainsk tenker akkurat som norsk: halvveis <i>til</i> neste time. Det er lettere for deg enn for en engelskspråklig!</div>
+<div class="tw"><table>
+<tr><th>kl.</th><th>Котра година?</th><th class="b">О котрій?</th><th>Halvtimen før</th><th></th></tr>
+<tr><td>1</td><td>перша</td><td class="b">о першій</td><td>пів на першу <span class="muted">(12:30)</span></td><td><button type="button" class="say" data-say="перша. о першій. пів на першу."></button></td></tr>
+<tr><td>2</td><td>друга</td><td class="b">о другій</td><td>пів на другу <span class="muted">(1:30)</span></td><td><button type="button" class="say" data-say="друга. о другій. пів на другу."></button></td></tr>
+<tr><td>3</td><td>третя</td><td class="b">о третій</td><td>пів на третю <span class="muted">(2:30)</span></td><td><button type="button" class="say" data-say="третя. о третій. пів на третю."></button></td></tr>
+<tr><td>4</td><td>четверта</td><td class="b">о четвертій</td><td>пів на четверту <span class="muted">(3:30)</span></td><td><button type="button" class="say" data-say="четверта. о четвертій. пів на четверту."></button></td></tr>
+<tr><td>5</td><td>п’ята</td><td class="b">о п’ятій</td><td>пів на п’яту <span class="muted">(4:30)</span></td><td><button type="button" class="say" data-say="п’ята. о п’ятій. пів на п’яту."></button></td></tr>
+<tr><td>6</td><td>шоста</td><td class="b">о шостій</td><td>пів на шосту <span class="muted">(5:30)</span></td><td><button type="button" class="say" data-say="шоста. о шостій. пів на шосту."></button></td></tr>
+<tr><td>7</td><td>сьома</td><td class="b">о сьомій</td><td>пів на сьому <span class="muted">(6:30)</span></td><td><button type="button" class="say" data-say="сьома. о сьомій. пів на сьому."></button></td></tr>
+<tr><td>8</td><td>восьма</td><td class="b">о восьмій</td><td>пів на восьму <span class="muted">(7:30)</span></td><td><button type="button" class="say" data-say="восьма. о восьмій. пів на восьму."></button></td></tr>
+<tr><td>9</td><td>дев’ята</td><td class="b">о дев’ятій</td><td>пів на дев’яту <span class="muted">(8:30)</span></td><td><button type="button" class="say" data-say="дев’ята. о дев’ятій. пів на дев’яту."></button></td></tr>
+<tr><td>10</td><td>десята</td><td class="b">о десятій</td><td>пів на десяту <span class="muted">(9:30)</span></td><td><button type="button" class="say" data-say="десята. о десятій. пів на десяту."></button></td></tr>
+<tr><td>11</td><td>одинадцята</td><td class="b">об одинадцятій</td><td>пів на одинадцяту <span class="muted">(10:30)</span></td><td><button type="button" class="say" data-say="одинадцята. об одинадцятій. пів на одинадцяту."></button></td></tr>
+<tr><td>12</td><td>дванадцята</td><td class="b">о дванадцятій</td><td>пів на дванадцяту <span class="muted">(11:30)</span></td><td><button type="button" class="say" data-say="дванадцята. о дванадцятій. пів на дванадцяту."></button></td></tr>
+</table></div>
+<div class="two">
+<div class="box forklaring"><h4>Morgen og kveld</h4>I hverdagen bruker folk 1–12. Trengs det, legger du til <b>ранку</b> (om morgenen) eller <b>вечора</b> (om kvelden): о сьомій вечора = 19:00. På stasjoner og i radio hører du også 24-timers tid.</div>
+<div class="box felle"><b class="tag">Se opp</b><br><b>Об</b> одинадцятій: foran et ord som begynner på o, blir о til об. Kvart på og kvart over venter vi med — i dag holder hele og halve timer.</div>
+</div>
+<div class="ex">
+<h3>Вправа 5</h3>
+<p class="instr">Котра година? Skriv svaret til hver klokke med ord. Den korte svarte viseren viser timen, den lange oransje viser minuttene.</p>
+<svg xmlns="http://www.w3.org/2000/svg" class="illu" role="img" viewBox="0 0 1240 640" aria-label="Åtte nummererte klokker">
+<circle cx="155" cy="170" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M155.0 60.0 L155.0 78.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M210.0 74.7 L205.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M250.3 115.0 L241.6 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M265.0 170.0 L247.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M250.3 225.0 L241.6 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M210.0 265.3 L205.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M155.0 280.0 L155.0 262.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M100.0 265.3 L105.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M59.7 225.0 L68.4 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M45.0 170.0 L63.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M59.7 115.0 L68.4 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M100.0 74.7 L105.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M155 170 L124.0 223.7" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M155 170 L155.0 78.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="155" cy="170" r="9" fill="#141414"/>
+<circle cx="51" cy="66" r="30" fill="#1460C4"/><text x="51" y="78" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">1</text>
+<circle cx="465" cy="170" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M465.0 60.0 L465.0 78.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M520.0 74.7 L515.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M560.3 115.0 L551.6 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M575.0 170.0 L557.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M560.3 225.0 L551.6 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M520.0 265.3 L515.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M465.0 280.0 L465.0 262.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M410.0 265.3 L415.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M369.7 225.0 L378.4 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M355.0 170.0 L373.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M369.7 115.0 L378.4 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M410.0 74.7 L415.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M465 170 L421.2 213.8" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M465 170 L465.0 262.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="465" cy="170" r="9" fill="#141414"/>
+<circle cx="361" cy="66" r="30" fill="#1460C4"/><text x="361" y="78" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">2</text>
+<circle cx="775" cy="170" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M775.0 60.0 L775.0 78.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M830.0 74.7 L825.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M870.3 115.0 L861.6 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M885.0 170.0 L867.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M870.3 225.0 L861.6 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M830.0 265.3 L825.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M775.0 280.0 L775.0 262.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M720.0 265.3 L725.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M679.7 225.0 L688.4 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M665.0 170.0 L683.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M679.7 115.0 L688.4 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M720.0 74.7 L725.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M775 170 L713.0 170.0" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M775 170 L775.0 78.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="775" cy="170" r="9" fill="#141414"/>
+<circle cx="671" cy="66" r="30" fill="#1460C4"/><text x="671" y="78" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">3</text>
+<circle cx="1085" cy="170" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M1085.0 60.0 L1085.0 78.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M1140.0 74.7 L1135.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1180.3 115.0 L1171.6 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1195.0 170.0 L1177.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M1180.3 225.0 L1171.6 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1140.0 265.3 L1135.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1085.0 280.0 L1085.0 262.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M1030.0 265.3 L1035.0 256.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M989.7 225.0 L998.4 220.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M975.0 170.0 L993.0 170.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M989.7 115.0 L998.4 120.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1030.0 74.7 L1035.0 83.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1085 170 L1101.0 110.1" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M1085 170 L1085.0 262.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="1085" cy="170" r="9" fill="#141414"/>
+<circle cx="981" cy="66" r="30" fill="#1460C4"/><text x="981" y="78" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">4</text>
+<circle cx="155" cy="480" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M155.0 370.0 L155.0 388.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M210.0 384.7 L205.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M250.3 425.0 L241.6 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M265.0 480.0 L247.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M250.3 535.0 L241.6 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M210.0 575.3 L205.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M155.0 590.0 L155.0 572.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M100.0 575.3 L105.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M59.7 535.0 L68.4 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M45.0 480.0 L63.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M59.7 425.0 L68.4 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M100.0 384.7 L105.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M155 480 L217.0 480.0" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M155 480 L155.0 388.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="155" cy="480" r="9" fill="#141414"/>
+<circle cx="51" cy="376" r="30" fill="#1460C4"/><text x="51" y="388" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">5</text>
+<circle cx="465" cy="480" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M465.0 370.0 L465.0 388.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M520.0 384.7 L515.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M560.3 425.0 L551.6 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M575.0 480.0 L557.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M560.3 535.0 L551.6 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M520.0 575.3 L515.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M465.0 590.0 L465.0 572.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M410.0 575.3 L415.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M369.7 535.0 L378.4 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M355.0 480.0 L373.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M369.7 425.0 L378.4 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M410.0 384.7 L415.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M465 480 L421.2 436.2" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M465 480 L465.0 572.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="465" cy="480" r="9" fill="#141414"/>
+<circle cx="361" cy="376" r="30" fill="#1460C4"/><text x="361" y="388" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">6</text>
+<circle cx="775" cy="480" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M775.0 370.0 L775.0 388.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M830.0 384.7 L825.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M870.3 425.0 L861.6 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M885.0 480.0 L867.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M870.3 535.0 L861.6 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M830.0 575.3 L825.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M775.0 590.0 L775.0 572.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M720.0 575.3 L725.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M679.7 535.0 L688.4 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M665.0 480.0 L683.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M679.7 425.0 L688.4 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M720.0 384.7 L725.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M775 480 L806.0 426.3" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M775 480 L775.0 388.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="775" cy="480" r="9" fill="#141414"/>
+<circle cx="671" cy="376" r="30" fill="#1460C4"/><text x="671" y="388" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">7</text>
+<circle cx="1085" cy="480" r="118" fill="#FCFCFA" stroke="#141414" stroke-width="10"/>
+<path d="M1085.0 370.0 L1085.0 388.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M1140.0 384.7 L1135.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1180.3 425.0 L1171.6 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1195.0 480.0 L1177.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M1180.3 535.0 L1171.6 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1140.0 575.3 L1135.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1085.0 590.0 L1085.0 572.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M1030.0 575.3 L1035.0 566.6" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M989.7 535.0 L998.4 530.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M975.0 480.0 L993.0 480.0" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+<path d="M989.7 425.0 L998.4 430.0" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1030.0 384.7 L1035.0 393.4" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+<path d="M1085 480 L1101.0 539.9" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+<path d="M1085 480 L1085.0 572.0" stroke="#C25E00" stroke-width="7" stroke-linecap="round"/>
+<circle cx="1085" cy="480" r="9" fill="#141414"/>
+<circle cx="981" cy="376" r="30" fill="#1460C4"/><text x="981" y="388" font-family="Oswald, Arial, sans-serif" font-size="34" font-weight="700" fill="#FCFCFA" text-anchor="middle">8</text>
+</svg>
+<p class="muted">Modell: 1 — Сьома. (Сьома година. er også riktig.)</p>
+<div id="ex5"></div>
+</div>
+</section>
+
+<section id="dagen">
+<p class="eyebrow">Del 6</p>
+<h2>Мій день</h2>
+<p class="sub">Dagen min</p>
+<p>Slik forteller Olena om dagen sin. Les og lytt. Hva gjør hun klokka sju? Og klokka tolv?</p>
+<div class="dialog box forklaring">
+<p><span class="pill">07:00</span>Я <span class="g">встаю</span> <span class="b">о сьомій</span>. <button type="button" class="say" data-say="Я встаю о сьомій."></button></p>
+<p><span class="pill">07:30</span>Я <span class="g">п’ю</span> каву <span class="b">о пів на восьму</span>. <button type="button" class="say" data-say="Я п’ю каву о пів на восьму."></button></p>
+<p><span class="pill">09:00</span><span class="b">О дев’ятій</span> я <span class="g">працюю</span>. <button type="button" class="say" data-say="О дев’ятій я працюю."></button></p>
+<p><span class="pill">12:00</span>Я <span class="g">обідаю</span> <span class="b">о дванадцятій</span>. <button type="button" class="say" data-say="Я обідаю о дванадцятій."></button></p>
+<p><span class="pill">18:00</span>Я <span class="g">вечеряю</span> <span class="b">о шостій вечора</span>. <button type="button" class="say" data-say="Я вечеряю о шостій вечора."></button></p>
+<p><span class="pill">23:00</span>Я <span class="g">лягаю спати</span> <span class="b">об одинадцятій</span>. <button type="button" class="say" data-say="Я лягаю спати об одинадцятій."></button></p>
+</div>
+<div class="two">
+<div class="box forklaring"><h4>Nye uttrykk</h4>обідаю = spiser lunsj<br>вечеряю = spiser middag<br>лягаю спати = legger meg<br>працюю = jobber · вчуся = studerer</div>
+<div class="box gratis"><b class="tag">Gratis</b><br>Tidsuttrykket kan stå først eller sist, som på norsk: <b>О дев’ятій</b> я працюю = Klokka ni jobber jeg. Я працюю <b>о дев’ятій</b> = Jeg jobber klokka ni.</div>
+</div>
+<div class="ex">
+<h3>Вправа 6</h3>
+<p class="instr">Skriv om din egen dag. Fyll inn klokkeslett som stemmer for deg, for eksempel «сьомій» eller «пів на восьму». Si setningene høyt etterpå.</p>
+<div id="ex6"></div>
+<div class="box tips"><b>Sjekk selv:</b> о + -ій (о сьомій) · halv: о пів на восьму · kl. 11: об одинадцятій. Jobber du ikke? Bytt працюю med вчуся (studerer) eller гуляю (går tur).</div>
+</div>
+</section>
+
+<section id="datoer">
+<p class="eyebrow">Del 7</p>
+<h2>Дати</h2>
+<p class="sub">Måneder, datoer og bursdag</p>
+<div class="box forklaring">
+<h4>Månedene har to former</h4>
+<p>Når du sier navnet på måneden, bruker du grunnformen: <b>травень</b> (mai). I en dato — «den 20. mai» — endrer måneden form: <b>двадцятого травня</b>. Nesten alle månedene ender på -ень, og i datoen blir det -ня.</p>
+</div>
+<div class="tw"><table>
+<tr><th>Nr.</th><th>Måned</th><th class="b">I en dato</th><th>Norsk</th><th></th></tr>
+<tr><td>1</td><td>січень</td><td class="b">січня</td><td>januar</td><td><button type="button" class="say" data-say="січень, січня"></button></td></tr>
+<tr><td>2</td><td>лютий</td><td class="b">лютого</td><td>februar</td><td><button type="button" class="say" data-say="лютий, лютого"></button></td></tr>
+<tr><td>3</td><td>березень</td><td class="b">березня</td><td>mars</td><td><button type="button" class="say" data-say="березень, березня"></button></td></tr>
+<tr><td>4</td><td>квітень</td><td class="b">квітня</td><td>april</td><td><button type="button" class="say" data-say="квітень, квітня"></button></td></tr>
+<tr><td>5</td><td>травень</td><td class="b">травня</td><td>mai</td><td><button type="button" class="say" data-say="травень, травня"></button></td></tr>
+<tr><td>6</td><td>червень</td><td class="b">червня</td><td>juni</td><td><button type="button" class="say" data-say="червень, червня"></button></td></tr>
+<tr><td>7</td><td>липень</td><td class="b">липня</td><td>juli</td><td><button type="button" class="say" data-say="липень, липня"></button></td></tr>
+<tr><td>8</td><td>серпень</td><td class="b">серпня</td><td>august</td><td><button type="button" class="say" data-say="серпень, серпня"></button></td></tr>
+<tr><td>9</td><td>вересень</td><td class="b">вересня</td><td>september</td><td><button type="button" class="say" data-say="вересень, вересня"></button></td></tr>
+<tr><td>10</td><td>жовтень</td><td class="b">жовтня</td><td>oktober</td><td><button type="button" class="say" data-say="жовтень, жовтня"></button></td></tr>
+<tr><td>11</td><td>листопад</td><td class="b">листопада</td><td>november</td><td><button type="button" class="say" data-say="листопад, листопада"></button></td></tr>
+<tr><td>12</td><td>грудень</td><td class="b">грудня</td><td>desember</td><td><button type="button" class="say" data-say="грудень, грудня"></button></td></tr>
+</table></div>
+<div class="two">
+<div class="box gratis"><b class="tag">Gratis</b><br>Månedene skrives med liten forbokstav, som januar og mai.</div>
+<div class="box felle"><b class="tag">Felle</b><br>Ingen av navnene ligner på norsk. De kommer fra naturen: листопад = løvfall, квітень = blomster (квіти), липень = lind (липа).</div>
+</div>
+<h3>Коли твій день народження?</h3>
+<p>День народження = bursdag. Spørsmålet og svaret:</p>
+<p class="big">Коли твій день народження? — <span class="b">Двадцятого травня.</span> <button type="button" class="say" data-say="Коли твій день народження? Двадцятого травня."></button></p>
+<div class="box forklaring">
+<h4>Slik bygger du datoen</h4>
+<p><b>Dagen</b> er et ordenstall som ender på <b>-ого</b>: першого (den første), другого, двадцятого. <b>Måneden</b> står i datoformen fra tabellen: травня.</p>
+<p>I sammensatte tall endres bare siste del: 21 = двадцять <b>першого</b>, 25 = двадцять <b>п’ятого</b>.</p>
+<p><b>Dagens dato</b> sier du litt annerledes, med <b>-е</b>: Яке сьогодні число? — Сьогодні <b>друге</b> листопада. Den formen holder det å kjenne igjen.</p>
+</div>
+<div class="box gratis"><b class="tag">Gratis</b><br>Norsk bruker også ordenstall i datoer: «den tjuende mai» = двадцятого травня.</div>
+<div class="tool">
+<h4 style="margin-top:0">Datomaskinen</h4>
+<p>Velg dag og måned. Maskinen viser hvordan du sier datoen.</p>
+<label>Dag: <select id="dmDay"></select></label>
+<label>Måned: <select id="dmMonth"></select></label>
+<button type="button" class="primary" id="dmToday">I dag</button>
+<div class="out" id="dmOut"></div>
+</div>
+<details>
+<summary>Alle datoene 1–31</summary>
+<div class="tw" id="dateList"></div>
+</details>
+<div class="ex">
+<h3>Вправа 7</h3>
+<p class="instr">Svar med datoen i ord. Bruk tabellen og datomaskinen.</p>
+<div id="ex7"></div>
+</div>
+</section>
+
+<section id="spill">
+<p class="eyebrow">Del 8</p>
+<h2>Граємо!</h2>
+<p class="sub">Spill du kan spille alene</p>
+<h3>Швидко! · Fort!</h3>
+<p>Ta tiden. Les alle tolv tallene høyt, rad for rad, så fort du kan. Trykk <b>Stopp</b> når du er ferdig. Prøv tre ganger og slå din egen rekord. Målet er under 30 sekunder.</p>
+<div class="grid12" id="g1grid"></div>
+<div class="btns">
+<button type="button" class="primary" id="g1start">Start</button>
+<button type="button" id="g1stop">Stopp</button>
+<button type="button" id="g1new">Nye tall</button>
+<button type="button" id="g1words">Vis ordene</button>
+<span class="timer" id="g1time">0,0 s</span>
+<span class="muted" id="g1best"></span>
+</div>
+<h3>Hør og skriv</h3>
+<p id="g2intro">Trykk <b>Nytt tall</b>. Hør tallet og skriv det med sifre. Ingen ukrainsk stemme på maskinen? Da ser du tallet skrevet med ord i stedet.</p>
+<div class="tool">
+<div class="btns" style="margin-top:0">
+<button type="button" class="primary" id="g2new">Nytt tall</button>
+<button type="button" id="g2again">Hør igjen</button>
+<label><input type="checkbox" id="g2read"> Vis ordet i stedet for lyd</label>
+</div>
+<div class="out" id="g2word"></div>
+<label>Tallet: <input type="text" id="g2in" inputmode="numeric" style="width:6em"></label>
+<button type="button" id="g2check">Sjekk</button>
+<span class="mark" id="g2mark"></span>
+<p class="score" id="g2score">0 av 0</p>
+</div>
+<h3>Uten skjerm</h3>
+<ul>
+<li>Tell baklengs fra двадцять til нуль. Så fra сто til нуль i tiere: сто, дев’яносто, вісімдесят …</li>
+<li>Hver gang du ser en klokke i dag, si høyt hva klokka er: «Пів на четверту!»</li>
+<li>Les husnummer, bussnumre og priser høyt på ukrainsk når du går ut.</li>
+</ul>
+</section>
+
+<section id="spor">
+<p class="eyebrow">Del 9</p>
+<h2>Спитай когось</h2>
+<p class="sub">Spør noen som snakker ukrainsk</p>
+<p>Nå bruker du det du har lært med et ekte menneske. Finn en som snakker ukrainsk: en partner, en kollega, en nabo, en venn — eller ring familie i Ukraina på video. Fem minutter holder.</p>
+<div class="box forklaring">
+<h4>Før du starter</h4>
+<p>Привіт! Я вивчаю українську. Можна запитати? <button type="button" class="say" data-say="Привіт! Я вивчаю українську. Можна запитати?"></button><br><span class="muted">Hei! Jeg lærer ukrainsk. Kan jeg spørre (deg om noe)?</span></p>
+<p>Повільніше, будь ласка. <button type="button" class="say" data-say="Повільніше, будь ласка."></button> <span class="muted">· Saktere, takk.</span><br>Ще раз, будь ласка. <button type="button" class="say" data-say="Ще раз, будь ласка."></button> <span class="muted">· En gang til, takk.</span><br>Дякую! <button type="button" class="say" data-say="Дякую!"></button> <span class="muted">· Takk!</span></p>
+</div>
+<p><b>Ти eller ви?</b> Ти til venner og familie. Ви til eldre og folk du ikke kjenner så godt.</p>
+<div class="btns" role="radiogroup" aria-label="Velg ти eller ви">
+<label><input type="radio" name="tyvy" value="ty" checked> ти</label>
+<label><input type="radio" name="tyvy" value="vy"> ви</label>
+</div>
+<div id="ex9q"></div>
+<div class="box tips">Bor personen i Ukraina? Spør også: <b>Котра година у вас?</b> (Hva er klokka hos dere?) Klokka i Kyiv er én time mer enn i Oslo.</div>
+<h3>Fortell om personen</h3>
+<p>Skriv tre–fire setninger om personen du snakket med. Bruk він (han) eller вона (hun), og verbformene i modellen. Les teksten høyt for personen og spør: <b>Правильно?</b> (Stemmer det?)</p>
+<div class="box forklaring">
+<p><b>Modell:</b> Це Оксана. Вона <span class="g">встає</span> <span class="b">о шостій</span> і <span class="g">п’є</span> <span class="r">дві чашки кави</span>. Вона <span class="g">обідає</span> <span class="b">о першій</span>. Її день народження — <span class="b">двадцятого травня</span>. <button type="button" class="say" data-say="Це Оксана. Вона встає о шостій і п’є дві чашки кави. Вона обідає о першій. Її день народження — двадцятого травня."></button></p>
+<p class="muted">я встаю → вона встає · я п’ю → вона п’є · я обідаю → вона обідає · її = hennes · його = hans</p>
+</div>
+<textarea data-save="omPersonen" lang="uk" aria-label="Tekst om personen"></textarea>
+</section>
+
+<section id="sjekk">
+<p class="eyebrow">Del 10</p>
+<h2>Що я вмію</h2>
+<p class="sub">Hva kan jeg nå?</p>
+<p>Kryss av det du kan si uten å se i forklaringene. Det du ikke krysser av, kan du øve mer på i delen som står i parentes.</p>
+<ul class="check">
+<li><label><input type="checkbox" data-save="c1"> Я можу рахувати до ста. — <i>tretten, førti, hundre</i>: тринадцять, сорок, сто <span class="muted">(del 2–4)</span></label></li>
+<li><label><input type="checkbox" data-save="c2"> Я можу сказати, котра година. — Пів на восьму. <span class="muted">(del 5)</span></label></li>
+<li><label><input type="checkbox" data-save="c3"> Я можу описати свій день. — Я встаю о сьомій. <span class="muted">(del 6)</span></label></li>
+<li><label><input type="checkbox" data-save="c4"> Я можу сказати дату. — Сьогодні друге листопада. <span class="muted">(del 7)</span></label></li>
+<li><label><input type="checkbox" data-save="c5"> Я можу сказати, коли мій день народження. — Двадцятого травня. <span class="muted">(del 7)</span></label></li>
+<li><label><input type="checkbox" data-save="c6"> Я можу запитати когось українською. — Коли твій день народження? <span class="muted">(del 9)</span></label></li>
+</ul>
+</section>
+
+<section id="ekstra">
+<p class="eyebrow">Ekstra</p>
+<h2>Ще більше</h2>
+<p class="sub">For deg som vil øve mer</p>
+<div class="ex">
+<h3>Вправа 8</h3>
+<p class="instr">Hvilket tall mangler? Skriv det med ord.</p>
+<div id="ex8"></div>
+</div>
+<div class="ex">
+<h3>Вправа 9</h3>
+<p class="instr">I Kyiv er klokka én time mer enn i Oslo, både sommer og vinter. Котра година в Києві?</p>
+<p class="muted">Modell: В Осло сьома. А в Києві? — Восьма.</p>
+<div id="ex10"></div>
+</div>
+<p>Vil du ha alle tabellene samlet, med flere oppgaver? Bruk arbeidsheftet «Tall, klokkeslett og datoer».</p>
+</section>
+
+</main>
+
+<footer>
+<section class="noprint" style="margin-top:0">
+<h2 style="font-size:1.6rem">Lagre arbeidet</h2>
+<p>Last ned svarene dine som PDF eller Word, for eksempel for å vise dem til læreren eller ta dem med til neste time.</p>
+<div class="btns">
+<button type="button" class="primary" data-act="print">Skriv ut / lagre PDF</button>
+<button type="button" data-act="word">Last ned som Word</button>
+</div>
+</section>
+</footer>
+
+<button type="button" id="kbdBtn" aria-expanded="false" aria-controls="kbd">Ukrainsk tastatur</button>
+<div id="kbd" role="group" aria-label="Ukrainsk tastatur">
+<p id="kbdInfo">Klikk i et svarfelt, så på bokstavene.</p>
+<div id="kbdRows"></div>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- lagring ---------- */
+var KEY='ua-tall-selvstudium-v1', store={}, canSave=true;
+try{store=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){store={};canSave=false;}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(store));canSave=true;}catch(e){canSave=false;}showSaved();}
+function showSaved(){$('#saved').textContent=canSave?'Svarene lagres automatisk i denne nettleseren på denne maskinen. Ingenting sendes til læreren.':'Svarene kan ikke lagres her. Last ned PDF eller Word før du lukker siden.';}
+function bindSave(el){
+  var k=el.dataset.save; if(!k||el.dataset.bound)return; el.dataset.bound='1';
+  if(store[k]!=null){ if(el.type==='checkbox')el.checked=!!store[k]; else el.value=store[k]; }
+  var ev=(el.tagName==='SELECT'||el.type==='checkbox')?'change':'input';
+  el.addEventListener(ev,function(){store[k]=el.type==='checkbox'?el.checked:el.value;persist();});
+}
+
+/* ---------- tall og datoer ---------- */
+var UNITS=['нуль','один','два','три','чотири','п’ять','шість','сім','вісім','дев’ять'];
+var TEENS=['десять','одинадцять','дванадцять','тринадцять','чотирнадцять','п’ятнадцять','шістнадцять','сімнадцять','вісімнадцять','дев’ятнадцять'];
+var TENS=['','','двадцять','тридцять','сорок','п’ятдесят','шістдесят','сімдесят','вісімдесят','дев’яносто'];
+function numWord(n){ if(n===100)return 'сто'; if(n<10)return UNITS[n]; if(n<20)return TEENS[n-10]; var t=Math.floor(n/10),u=n%10; return TENS[t]+(u?' '+UNITS[u]:''); }
+var STEMS=['перш','друг','трет','четверт','п’ят','шост','сьом','восьм','дев’ят','десят','одинадцят','дванадцят','тринадцят','чотирнадцят','п’ятнадцят','шістнадцят','сімнадцят','вісімнадцят','дев’ятнадцят','двадцят'];
+function ordGen(n){ if(n<=20){var s=STEMS[n-1];return s==='трет'?'третього':s+'ого';} if(n<30)return 'двадцять '+ordGen(n-20); if(n===30)return 'тридцятого'; return 'тридцять '+ordGen(n-30); }
+function ordNeut(n){ if(n<=20){var s=STEMS[n-1];return s==='трет'?'третє':s+'е';} if(n<30)return 'двадцять '+ordNeut(n-20); if(n===30)return 'тридцяте'; return 'тридцять '+ordNeut(n-30); }
+var MONTHS=[['січень','січня','januar'],['лютий','лютого','februar'],['березень','березня','mars'],['квітень','квітня','april'],['травень','травня','mai'],['червень','червня','juni'],['липень','липня','juli'],['серпень','серпня','august'],['вересень','вересня','september'],['жовтень','жовтня','oktober'],['листопад','листопада','november'],['грудень','грудня','desember']];
+var DAYS_IN=[31,29,31,30,31,30,31,31,30,31,30,31];
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
+function todayPhrase(){var d=new Date();return 'Сьогодні '+ordNeut(d.getDate())+' '+MONTHS[d.getMonth()][1]+'.';}
+
+/* ---------- tale ---------- */
+var ukVoice=null, hasTTS=('speechSynthesis' in window);
+function pickVoice(){ if(!hasTTS)return; var vs=speechSynthesis.getVoices()||[]; ukVoice=null; for(var i=0;i<vs.length;i++){ if(/^uk/i.test(vs[i].lang)){ukVoice=vs[i];break;} } }
+if(hasTTS){ pickVoice(); try{speechSynthesis.onvoiceschanged=pickVoice;}catch(e){} }
+function voiceOK(){return hasTTS&&!!ukVoice;}
+function say(t){
+  if(!voiceOK()){ $('#voiceWarn').style.display='block'; return; }
+  try{ speechSynthesis.cancel(); var u=new SpeechSynthesisUtterance(t); u.lang='uk-UA'; u.voice=ukVoice; u.rate=0.85; speechSynthesis.speak(u);}catch(e){}
+}
+setTimeout(function(){ pickVoice(); if(!voiceOK()){ $('#voiceWarn').style.display='block'; var c=$('#g2read'); if(c){c.checked=true;} } },1500);
+var ICON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+function decorateSay(root){ $$('button.say',root).forEach(function(b){ if(!b.innerHTML.trim())b.innerHTML=ICON; if(!b.getAttribute('aria-label'))b.setAttribute('aria-label','Lytt'); }); }
+document.addEventListener('click',function(e){ var b=e.target.closest('button.say[data-say]'); if(b){say(b.dataset.say);} });
+
+/* ---------- sammenligning ---------- */
+var LAT={a:'а',e:'е',i:'і',o:'о',p:'р',c:'с',x:'х',y:'у',k:'к'};
+function norm(s){
+  s=String(s||'').normalize('NFC').toLowerCase().replace(/[ʼ'`´‘ʹ]/g,'’').replace(/[.!?,;:«»"—–\-()]+/g,' ').replace(/\s+/g,' ').trim();
+  if(/[а-яіїєґ]/.test(s)) s=s.replace(/[aeiopcxyk]/g,function(ch){return LAT[ch];});
+  return s;
+}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+/* ---------- øvelser ---------- */
+function renderEx(id,items,opt){
+  opt=opt||{}; var host=document.getElementById(id); if(!host)return;
+  var ol=document.createElement('ol'); ol.className='items'+(opt.cols?' cols':'');
+  items.forEach(function(it,i){
+    var li=document.createElement('li'); li.className='item';
+    var field;
+    if(it.opts){ field='<select data-i="'+i+'" data-save="'+id+'-'+i+'" aria-label="Svar '+(i+1)+'"><option value="">–</option>'+it.opts.map(function(o){return '<option value="'+o+'">'+o+'</option>';}).join('')+'</select>'; }
+    else { field='<input type="text" data-i="'+i+'" data-save="'+id+'-'+i+'" autocomplete="off" spellcheck="false" '+(it.num?'inputmode="numeric" ':'lang="uk" ')+'style="width:'+(it.w||12)+'ch" aria-label="Svar '+(i+1)+'">'; }
+    var q=it.q.indexOf('___')>=0?it.q.replace('___',field):it.q+' '+field;
+    li.innerHTML='<span class="n">'+(opt.start?opt.start+i:i+1)+'</span> '+q+' <span class="mark" aria-live="polite"></span><div class="why" hidden></div>';
+    ol.appendChild(li);
+  });
+  host.appendChild(ol);
+  var hasKey=items.some(function(it){return it.a;});
+  var bar=document.createElement('div'); bar.className='btns';
+  if(hasKey){ bar.innerHTML='<button type="button" class="primary" data-x="check">Sjekk</button><button type="button" data-x="key">Vis fasit</button><button type="button" data-x="clear">Tøm</button><span class="score" aria-live="polite"></span>'; }
+  else { bar.innerHTML=(opt.example?'<button type="button" class="primary" data-x="example">Vis eksempel</button>':'')+'<button type="button" data-x="clear">Tøm</button>'; }
+  host.appendChild(bar);
+  $$('input,select',ol).forEach(bindSave);
+  function field(i){return ol.children[i].querySelector('input,select');}
+  function setWhy(i,html){var w=ol.children[i].querySelector('.why');w.innerHTML=html;w.hidden=!html;}
+  function setMark(i,cls,txt){var m=ol.children[i].querySelector('.mark');m.className='mark'+(cls?' '+cls:'');m.textContent=txt||'';var f=field(i);f.classList.remove('ok','bad');if(cls)f.classList.add(cls);}
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return; var x=b.dataset.x, right=0, total=0;
+    items.forEach(function(it,i){
+      var f=field(i);
+      if(x==='clear'){ f.value=''; store[f.dataset.save]=''; setMark(i); setWhy(i,''); return; }
+      if(x==='example'&&it.ex){ setWhy(i,'Eksempel: <b>'+esc(it.ex)+'</b>'); return; }
+      if(!it.a){ if(x==='key'&&it.hint)setWhy(i,it.hint); return; }
+      total++;
+      var ok=it.a.some(function(a){return norm(a)===norm(f.value);});
+      if(x==='check'){
+        if(ok){ right++; setMark(i,'ok','✓ Riktig'); setWhy(i,it.why||''); }
+        else if(!f.value.trim()){ setMark(i,'bad','Ikke svart'); setWhy(i,''); }
+        else { setMark(i,'bad','Ikke helt — prøv igjen'); setWhy(i,''); }
+      } else if(x==='key'){ setWhy(i,'Fasit: <b>'+esc(it.a[0])+'</b>'+(it.why?' — '+it.why:'')); }
+    });
+    if(x==='clear')persist();
+    var sc=bar.querySelector('.score'); if(sc)sc.textContent=(x==='check')?(right+' av '+total+' riktig'):'';
+  });
+}
+
+/* Вправа 1 */
+renderEx('ex1',[
+ {q:'Huset har nummer ___',a:['14'],num:1,w:6,why:'чотирнадцять: husnummeret over døra.'},
+ {q:'Bussen har nummer ___',a:['16'],num:1,w:6,why:'шістнадцять: автобус шістнадцять.'},
+ {q:'Klokka er ___',a:['8:30','08:30','8.30','08.30','20:30'],num:1,w:7,why:'пів на дев’яту: halv ni. Ukrainsk teller halvtimen mot neste time, som norsk.'},
+ {q:'Kaffen koster ___ kr',a:['35'],num:1,w:6,why:'тридцять п’ять крон: 30 + 5, i samme rekkefølge som «trettifem».'},
+ {q:'Fartsskiltet viser ___',a:['30'],num:1,w:6,why:'тридцять: 30 km i timen.'},
+ {q:'Temperaturen er ___ °C',a:['5'],num:1,w:6,why:'п’ять градусів: fem grader.'}
+],{cols:1});
+
+/* Вправа 2 */
+var L='abcdefghij'.split('');
+renderEx('ex2',[
+ {q:'один <button type="button" class="say" data-say="один"></button> = skilt ___',a:['d'],opts:L,why:'1. один har trykket på slutten: o-DYN.'},
+ {q:'два <button type="button" class="say" data-say="два"></button> = skilt ___',a:['g'],opts:L,why:'2. Som «duo».'},
+ {q:'три <button type="button" class="say" data-say="три"></button> = skilt ___',a:['a'],opts:L,why:'3. Som «tre».'},
+ {q:'чотири <button type="button" class="say" data-say="чотири"></button> = skilt ___',a:['j'],opts:L,why:'4. Lær det utenat: tsjo-TY-ry.'},
+ {q:'п’ять <button type="button" class="say" data-say="п’ять"></button> = skilt ___',a:['e'],opts:L,why:'5. Apostrofen skiller п og я.'},
+ {q:'шість <button type="button" class="say" data-say="шість"></button> = skilt ___',a:['c'],opts:L,why:'6. Ligner på «seks» med sj-lyd.'},
+ {q:'сім <button type="button" class="say" data-say="сім"></button> = skilt ___',a:['i'],opts:L,why:'7. s- som i «sju».'},
+ {q:'вісім <button type="button" class="say" data-say="вісім"></button> = skilt ___',a:['b'],opts:L,why:'8. сім med ві- foran: det lengste ordet er det største tallet.'},
+ {q:'дев’ять <button type="button" class="say" data-say="дев’ять"></button> = skilt ___',a:['h'],opts:L,why:'9. Apostrof, akkurat som i п’ять.'},
+ {q:'десять <button type="button" class="say" data-say="десять"></button> = skilt ___',a:['f'],opts:L,why:'10. Som «desimal».'}
+],{cols:1});
+
+/* Вправа 3 */
+renderEx('ex3a',[
+ {q:'ч___тири',a:['о','чотири'],w:3,why:'чотири: første vokal er о.'},
+ {q:'с___м',a:['і','сім'],w:3,why:'сім: 6, 7 og 8 har alle і.'},
+ {q:'в___сім',a:['і','вісім'],w:3,why:'вісім: і to ganger, som i сім.'},
+ {q:'д___в’ять',a:['е','дев’ять'],w:3,why:'дев’ять: е, så apostrof og я.'},
+ {q:'ш___сть',a:['і','шість'],w:3,why:'шість: і, som i сім og вісім.'},
+ {q:'п’___ть',a:['я','п’ять'],w:3,why:'п’ять: etter apostrofen kommer я.'}
+],{cols:1});
+renderEx('ex3b',[
+ {q:'два, чотири, шість, ___',a:['вісім'],why:'Partall, +2: 2, 4, 6, 8.'},
+ {q:'один, три, п’ять, ___',a:['сім'],why:'Oddetall, +2: 1, 3, 5, 7.'},
+ {q:'п’ять, десять, п’ятнадцять, ___',a:['двадцять'],why:'+5: etter 15 kommer 20.'},
+ {q:'двадцять, тридцять, ___',a:['сорок'],why:'+10: 40 er сорок, et eget ord.'}
+],{start:7});
+renderEx('ex3c',[
+ {q:'три + чотири = ___',a:['сім'],why:'3 + 4 = 7.'},
+ {q:'десять − два = ___',a:['вісім'],why:'10 − 2 = 8.'},
+ {q:'дев’ять + дев’ять = ___',a:['вісімнадцять'],w:16,why:'9 + 9 = 18: вісім + надцять.'},
+ {q:'сто − десять = ___',a:['дев’яносто'],w:14,why:'100 − 10 = 90: дев’яносто, et eget ord.'}
+],{start:11});
+
+/* Вправа 4 */
+renderEx('ex4',[
+ {q:'<span class="muted">bussholdeplass</span><br>— Який автобус?<br>— <b>Шістнадцять</b> (___).',a:['16'],num:1,w:5,why:'шіст- = шість (6) + надцять.'},
+ {q:'<span class="muted">i oppgangen</span><br>— Де живе Анна?<br>— У квартирі <b>чотирнадцять</b> (___).',a:['14'],num:1,w:5,why:'чотир- = чотири (4) + надцять.'},
+ {q:'<span class="muted">på kurset</span><br>— Де урок?<br>— У кімнаті <b>вісімнадцять</b> (___).',a:['18'],num:1,w:5,why:'вісім (8) + надцять, helt uendret.'},
+ {q:'<span class="muted">to tenåringer</span><br>— Скільки тобі років?<br>— <b>Тринадцять</b> (___). А тобі?',a:['13'],num:1,w:5,why:'три (3) + надцять — som «tretten».'},
+ {q:'<span class="muted">på markedet</span><br>— Скільки яблук?<br>— <b>Дванадцять</b> (___), будь ласка.',a:['12'],num:1,w:5,why:'два (2) + надцять. Med -на- i midten: 12, ikke 20.'},
+ {q:'<span class="muted">på trikken</span><br>— Це трамвай <b>сімнадцять</b> (___)?<br>— Так!',a:['17'],num:1,w:5,why:'сім (7) + надцять.'},
+ {q:'<span class="muted">på restaurant</span><br>— Де наш столик?<br>— Столик <b>дев’ятнадцять</b> (___).',a:['19'],num:1,w:5,why:'дев’ят- = дев’ять (9) + надцять.'},
+ {q:'<span class="muted">på legekontoret</span><br>— Скільки хвилин?<br>— <b>П’ятнадцять</b> (___) хвилин.',a:['15'],num:1,w:5,why:'п’ят- = п’ять (5) + надцять.'},
+ {q:'<span class="muted">i kaféen</span><br>— Скільки коштує кава?<br>— <b>Двадцять</b> (___) крон.',a:['20'],num:1,w:5,why:'два + дцять: to tiere, uten -на-.'},
+ {q:'<span class="muted">i timen</span><br>— Яка сторінка?<br>— Сторінка <b>одинадцять</b> (___).',a:['11'],num:1,w:5,why:'один (1) + надцять.'}
+],{cols:1});
+
+/* Вправа 5 */
+function hour(w){return [w,w+' година'];}
+renderEx('ex5',[
+ {q:'Klokke 1:',a:hour('сьома'),w:18,why:'7:00. Hel time: bare ordenstallet, сьома (година).'},
+ {q:'Klokke 2:',a:['пів на восьму'],w:18,why:'7:30. Halv åtte: пів на + neste time.'},
+ {q:'Klokke 3:',a:hour('дев’ята'),w:18,why:'9:00. Hel time.'},
+ {q:'Klokke 4:',a:['пів на першу'],w:18,why:'12:30. Halv ett: etter 12 kommer 1. Пів на дванадцяту er 11:30.'},
+ {q:'Klokke 5:',a:hour('третя'),w:18,why:'3:00. Hel time.'},
+ {q:'Klokke 6:',a:['пів на одинадцяту'],w:18,why:'10:30. Halv elleve: neste time er 11.'},
+ {q:'Klokke 7:',a:hour('перша'),w:18,why:'1:00. Hel time.'},
+ {q:'Klokke 8:',a:['пів на шосту'],w:18,why:'5:30. Halv seks: neste time er 6.'}
+],{cols:1});
+
+/* Вправа 6 */
+renderEx('ex6',[
+ {q:'Я встаю о ___.',w:16,ex:'Я встаю о сьомій.'},
+ {q:'Я п’ю каву о ___.',w:16,ex:'Я п’ю каву о пів на восьму.'},
+ {q:'Я працюю о ___.',w:16,ex:'Я працюю о дев’ятій.'},
+ {q:'Я обідаю о ___.',w:16,ex:'Я обідаю о дванадцятій.'},
+ {q:'Я вечеряю о ___.',w:16,ex:'Я вечеряю о шостій вечора.'},
+ {q:'Я лягаю спати о ___.',w:16,ex:'Я лягаю спати об одинадцятій.'}
+],{example:1});
+
+/* Вправа 7 */
+renderEx('ex7',[
+ {q:'<span class="muted">nyttår · 1.1</span><br>Коли Новий рік? — ___',a:['першого січня'],w:24,why:'1 → першого · січень → січня.'},
+ {q:'<span class="muted">Norges nasjonaldag · 17.5</span><br>Коли День Конституції Норвегії? — ___',a:['сімнадцятого травня'],w:24,why:'17 → сімнадцятого · травень → травня.'},
+ {q:'<span class="muted">Ukrainas uavhengighetsdag · 24.8</span><br>Коли День Незалежності України? — ___',a:['двадцять четвертого серпня'],w:28,why:'Bare siste del endres: двадцять + четвертого · серпень → серпня.'},
+ {q:'<span class="muted">jul · 25.12</span><br>Коли Різдво? — ___',a:['двадцять п’ятого грудня'],w:28,why:'двадцять + п’ятого · грудень → грудня. Siden 2023 feirer Ukraina jul 25. desember, som Norge.'},
+ {q:'<span class="muted">din bursdag</span><br>Коли твій день народження? — ___',w:28,hint:'Bruk datomaskinen over: velg dagen og måneden din.'},
+ {q:'<span class="muted">dagens dato</span><br>Яке сьогодні число? — ___',w:28,hint:'I dag: <b>'+esc(todayPhrase())+'</b> Dagen ender på -е.'}
+],{cols:1});
+
+/* Вправа 8 */
+renderEx('ex8',[
+ {q:'десять, двадцять, тридцять, ___',a:['сорок'],why:'+10 → 40: сорок, et eget ord.'},
+ {q:'сто, дев’яносто, вісімдесят, ___',a:['сімдесят'],why:'−10 → 70: сім + десят.'},
+ {q:'одинадцять, дванадцять, ___, чотирнадцять',a:['тринадцять'],why:'+1 → 13: три + надцять.'},
+ {q:'п’ять, п’ятнадцять, двадцять п’ять, ___',a:['тридцять п’ять'],w:16,why:'+10 → 35, i samme rekkefølge som «trettifem».'},
+ {q:'двадцять + двадцять = ___',a:['сорок'],why:'20 + 20 = 40.'},
+ {q:'сто − десять = ___',a:['дев’яносто'],w:14,why:'100 − 10 = 90: дев’яносто, et eget ord.'},
+ {q:'п’ятдесят + п’ять = ___',a:['п’ятдесят п’ять'],w:18,why:'50 + 5 = 55: to ord, uten «og».'},
+ {q:'шістдесят + шість = ___',a:['шістдесят шість'],w:18,why:'60 + 6 = 66.'}
+]);
+
+/* Вправа 9 (Kyiv) */
+renderEx('ex10',[
+ {q:'В Осло дев’ята. А в Києві? — ___',a:hour('десята'),w:16,why:'9 + 1 = 10: десята.'},
+ {q:'В Осло пів на першу. А в Києві? — ___',a:['пів на другу'],w:16,why:'12:30 + 1 = 13:30: halv to, пів на другу.'},
+ {q:'В Осло дванадцята. А в Києві? — ___',a:hour('перша'),w:16,why:'Etter 12 kommer 1: перша.'},
+ {q:'В Осло пів на шосту. А в Києві? — ___',a:['пів на сьому'],w:16,why:'5:30 + 1 = 6:30: halv sju, пів на сьому.'},
+ {q:'В Осло десята вечора. А в Києві? — ___',a:['одинадцята','одинадцята вечора','одинадцята година','одинадцята година вечора'],w:20,why:'22 + 1 = 23: одинадцята (вечора).'}
+]);
+
+/* Del 9: intervju */
+var QS=[['Котра година зараз?','Котра година зараз?'],['О котрій ти встаєш?','О котрій ви встаєте?'],['Скільки кави ти п’єш?','Скільки кави ви п’єте?'],['О котрій ти обідаєш?','О котрій ви обідаєте?'],['Коли твій день народження?','Коли ваш день народження?']];
+(function(){
+  var host=$('#ex9q'), ol=document.createElement('ol'); ol.className='items';
+  QS.forEach(function(q,i){ var li=document.createElement('li'); li.className='item';
+    li.innerHTML='<span class="n">'+(i+1)+'</span> <b class="q uk"></b> <button type="button" class="say"></button><br><label class="muted">Svaret: <input type="text" lang="uk" data-save="int-'+i+'" style="width:22ch"></label>';
+    ol.appendChild(li); });
+  host.appendChild(ol); $$('input',ol).forEach(bindSave);
+  function upd(){ var vy=(($('input[name=tyvy]:checked')||{}).value==='vy'); $$('li',ol).forEach(function(li,i){var t=QS[i][vy?1:0];$('.q',li).textContent=t;$('.say',li).dataset.say=t;}); }
+  $$('input[name=tyvy]').forEach(function(r){ if(store.tyvy&&r.value===store.tyvy)r.checked=true; r.addEventListener('change',function(){store.tyvy=r.value;persist();upd();}); });
+  upd();
+})();
+
+/* tallmaskinen */
+(function(){
+  var inp=$('#tmIn'), out=$('#tmOut'), b=$('#tmSay');
+  function upd(){ var v=inp.value.trim(); if(v===''){out.textContent='';return;} var n=parseInt(v,10); if(isNaN(n)||n<0||n>100||String(n)!==v.replace(/^0+(?=\d)/,'')){out.textContent='Skriv et helt tall fra 0 til 100.';b.dataset.say='';return;} out.textContent=n+' = '+numWord(n); b.dataset.say=numWord(n); }
+  inp.addEventListener('input',upd);
+})();
+
+/* datomaskinen + liste */
+(function(){
+  var d=$('#dmDay'), m=$('#dmMonth'), out=$('#dmOut');
+  for(var i=1;i<=31;i++){d.insertAdjacentHTML('beforeend','<option value="'+i+'">'+i+'</option>');}
+  MONTHS.forEach(function(x,i){m.insertAdjacentHTML('beforeend','<option value="'+i+'">'+x[2]+' · '+x[0]+'</option>');});
+  if(store.dmDay)d.value=store.dmDay; else d.value=20;
+  if(store.dmMonth)m.value=store.dmMonth; else m.value=4;
+  function upd(){ var day=+d.value, mo=+m.value; if(day>DAYS_IN[mo]){out.innerHTML='<span class="muted">'+MONTHS[mo][2]+' har bare '+DAYS_IN[mo]+' dager.</span>';return;}
+    var a=cap(ordGen(day))+' '+MONTHS[mo][1]+'.', b='Сьогодні '+ordNeut(day)+' '+MONTHS[mo][1]+'.';
+    out.innerHTML='<span class="muted" style="font-size:1rem;font-weight:400">Коли? </span>'+esc(a)+' <button type="button" class="say" data-say="'+esc(a)+'"></button><br><span class="muted" style="font-size:1rem;font-weight:400">Hvis det er i dag: </span>'+esc(b)+' <button type="button" class="say" data-say="'+esc(b)+'"></button>';
+    decorateSay(out); store.dmDay=d.value; store.dmMonth=m.value; persist(); }
+  d.addEventListener('change',upd); m.addEventListener('change',upd);
+  $('#dmToday').addEventListener('click',function(){var t=new Date();d.value=t.getDate();m.value=t.getMonth();upd();});
+  upd();
+  var rows='<table><tr><th>Dag</th><th>Коли? (-ого)</th><th>I dag (-е)</th></tr>';
+  for(var k=1;k<=31;k++){rows+='<tr><td>'+k+'</td><td>'+ordGen(k)+'</td><td>'+ordNeut(k)+'</td></tr>';}
+  $('#dateList').innerHTML=rows+'</table>';
+})();
+
+/* spill 1: Швидко! */
+(function(){
+  var POOL=[3,7,11,12,13,14,15,16,17,18,19,20,30,40,44,26,90,99,50,60,70,80,35,47,61,72,88,93,8,9];
+  var grid=$('#g1grid'), tEl=$('#g1time'), bestEl=$('#g1best'), t0=0, timer=null, showW=false, nums=[];
+  function fmt(ms){return (ms/1000).toFixed(1).replace('.',',')+' s';}
+  function best(){bestEl.textContent=store.g1best?('Rekord: '+fmt(store.g1best)):'';}
+  function deal(first){ var p=POOL.slice(); nums=[]; if(first){nums=[12,7,19,30,15,44,3,18,90,11,26,13];} else { while(nums.length<12){nums.push(p.splice(Math.floor(Math.random()*p.length),1)[0]);} } draw(); }
+  function draw(){ grid.innerHTML=nums.map(function(n){return '<div>'+n+'<small>'+(showW?numWord(n):'')+'</small></div>';}).join(''); }
+  $('#g1start').addEventListener('click',function(){ t0=performance.now(); clearInterval(timer); timer=setInterval(function(){tEl.textContent=fmt(performance.now()-t0);},100); });
+  $('#g1stop').addEventListener('click',function(){ if(!timer)return; clearInterval(timer); timer=null; var ms=performance.now()-t0; tEl.textContent=fmt(ms); if(!store.g1best||ms<store.g1best){store.g1best=ms;persist();} best(); });
+  $('#g1new').addEventListener('click',function(){deal(false);});
+  $('#g1words').addEventListener('click',function(e){showW=!showW;e.target.textContent=showW?'Skjul ordene':'Vis ordene';draw();});
+  deal(true); best();
+})();
+
+/* spill 2: Hør og skriv */
+(function(){
+  var cur=null, right=0, total=0, word=$('#g2word'), inp=$('#g2in'), mark=$('#g2mark');
+  function readMode(){return $('#g2read').checked||!voiceOK();}
+  function show(){ word.textContent=(cur!==null&&readMode())?numWord(cur):(cur!==null?'Lytt …':''); }
+  $('#g2new').addEventListener('click',function(){ cur=Math.floor(Math.random()*101); inp.value=''; mark.textContent=''; mark.className='mark'; show(); if(!readMode())say(numWord(cur)); inp.focus(); });
+  $('#g2again').addEventListener('click',function(){ if(cur!==null){ if(readMode())show(); else say(numWord(cur)); } });
+  $('#g2read').addEventListener('change',show);
+  function check(){ if(cur===null)return; total++; if(parseInt(inp.value,10)===cur){right++;mark.textContent='✓ Riktig: '+cur+' = '+numWord(cur);mark.className='mark ok';} else {mark.textContent='Det var '+cur+' = '+numWord(cur);mark.className='mark bad';} $('#g2score').textContent=right+' av '+total; cur=null; }
+  $('#g2check').addEventListener('click',check);
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')check();});
+})();
+
+/* tastatur */
+(function(){
+  var rows=[['й','ц','у','к','е','н','г','ш','щ','з','х','ї'],['ф','і','в','а','п','р','о','л','д','ж','є','ґ'],['я','ч','с','м','и','т','ь','б','ю','’']], upper=false, last=null;
+  var kb=$('#kbd'), btn=$('#kbdBtn'), wrap=$('#kbdRows');
+  function draw(){ wrap.innerHTML=rows.map(function(r){return '<div class="row">'+r.map(function(c){var ch=upper?c.toUpperCase():c;return '<button type="button" data-ch="'+ch+'">'+ch+'</button>';}).join('')+'</div>';}).join('')+'<div class="row"><button type="button" data-k="shift">⇧ Store</button><button type="button" class="wide" data-ch=" ">Mellomrom</button><button type="button" data-k="back">⌫</button></div>'; }
+  draw();
+  document.addEventListener('focusin',function(e){ var t=e.target; if(t.matches&&t.matches('input[type=text],textarea')){last=t;$('#kbdInfo').textContent='Tastaturet skriver i feltet du valgte sist.';} });
+  btn.addEventListener('click',function(){ var open=kb.style.display==='block'; kb.style.display=open?'none':'block'; btn.setAttribute('aria-expanded',String(!open)); btn.textContent=open?'Ukrainsk tastatur':'Lukk tastaturet'; });
+  wrap.addEventListener('mousedown',function(e){e.preventDefault();});
+  wrap.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b)return;
+    if(b.dataset.k==='shift'){upper=!upper;draw();return;}
+    if(!last){$('#kbdInfo').textContent='Klikk først i et svarfelt.';return;}
+    var s=last.selectionStart, en=last.selectionEnd; if(s==null){s=en=last.value.length;}
+    if(b.dataset.k==='back'){ if(s===en&&s>0)s--; last.setRangeText('',s,en,'end'); }
+    else last.setRangeText(b.dataset.ch,s,en,'end');
+    last.focus({preventScroll:true}); last.dispatchEvent(new Event('input',{bubbles:true}));
+  });
+})();
+
+/* lagre / skrive ut / tømme */
+function wordExport(){
+  var clone=document.createElement('div');
+  clone.appendChild($('header').cloneNode(true)); clone.appendChild($('main').cloneNode(true));
+  var live=$$('input,select,textarea',document.querySelector('header')).concat($$('input,select,textarea',document.querySelector('main')));
+  var copies=$$('input,select,textarea',clone);
+  copies.forEach(function(c,i){ var o=live[i], v='';
+    if(o.type==='checkbox'||o.type==='radio'){ v=o.checked?'☑':'☐'; }
+    else if(o.tagName==='SELECT'){ v=o.value||'____'; }
+    else { v=o.value||'________'; }
+    var s=document.createElement('span'); s.textContent=' '+v+' '; s.style.cssText='font-weight:bold;color:#1460C4;text-decoration:underline'; c.parentNode.replaceChild(s,c); });
+  $$('button,svg,.tool,.btns,.warn,.saved,.logo,script,.signs',clone).forEach(function(n){n.remove();});
+  $$('.why[hidden]',clone).forEach(function(n){n.remove();});
+  $$('details',clone).forEach(function(n){n.setAttribute('open','');});
+  var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>Числа щодня</title><style>body{font-family:Calibri,Arial,sans-serif;font-size:12pt;color:#222}h1,h2,h3{font-family:Calibri,Arial,sans-serif;color:#141414}h1{font-size:22pt}h2{font-size:16pt;margin-top:18pt}h3{font-size:13pt}table{border-collapse:collapse}td,th{border:1px solid #bbb;padding:3pt 6pt}th{background:#EAF1FB}.muted,.sub{color:#5F6670}.box,.why{background:#EAF1FB;padding:4pt 8pt}.r{color:#C0392B}.g{color:#2E7D32}.b{color:#1460C4}</style></head><body>'+clone.innerHTML+'</body></html>';
+  var blob=new Blob(['﻿',html],{type:'application/msword'});
+  var a=document.createElement('a'); var nm=(($('#navn')||{}).value||'').trim().replace(/[^\wæøåÆØÅ\- ]/g,'').replace(/\s+/g,'_');
+  a.href=URL.createObjectURL(blob); a.download='Tall_klokka_datoer'+(nm?'_'+nm:'')+'.doc';
+  document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
+}
+document.addEventListener('click',function(e){ var b=e.target.closest('[data-act]'); if(!b)return; var a=b.dataset.act;
+  if(a==='print'){ $$('details').forEach(function(d){d.setAttribute('open','');}); window.print(); }
+  else if(a==='word'){ wordExport(); }
+  else if(a==='clearall'){ if(window.confirm('Vil du slette alle svarene dine på denne siden?')){ store={}; persist(); location.reload(); } }
+});
+
+$$('[data-save]').forEach(bindSave);
+decorateSay(document);
+showSaved();
+})();
+
+</script>
+</body>
+</html>
